@@ -23,7 +23,7 @@ stages:
     steps:
         - task: Docker@2
           inputs:
-           containerRegistry: 'skyflambe/weatherapi'
+           containerRegistry: 'skyflambe weatherapi'
            command: 'buildAndPush'
            Dockerfile: '**/Dockerfile'
            tags: |
