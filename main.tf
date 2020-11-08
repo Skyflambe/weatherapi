@@ -3,6 +3,10 @@ provider "azurerm" {
     features {}
 }
 
+variable "imagebuild" {
+    type = string
+    description = "Latest image build number"
+}
 
 resource "azurerm_resource_group" "tf_test" {
     name                        = "tf_sky_test01_main_rg"
@@ -20,7 +24,7 @@ resource "azurerm_container_group" "tf_cont_test" {
 
     container  {
         name                    = "weatherapi"
-        image                   = "skyflambe/weatherapi"
+        image                   = "skyflambe/weatherapi:${var.imagebuild}"
         cpu                     = "1"
         memory                  = "1"
 
