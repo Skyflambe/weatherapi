@@ -5,7 +5,7 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "tf_test" {
-    name                        = "tf_test_main_rg"
+    name                        = "tf_sky_test01_main_rg"
     location                    = "Australia East"
 }
 
